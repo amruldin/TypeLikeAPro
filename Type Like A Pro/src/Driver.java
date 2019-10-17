@@ -1,4 +1,8 @@
 
+/*
+ * Author : Amruldin Jamalli
+ * Description : Basic Typing game
+ */
 
 public class Driver {
 
@@ -11,12 +15,17 @@ public class Driver {
 		DataConfig data = new DataConfig();
 		
 		
-		String word = data.generateWord();
-		System.out.println("\n\n************ \t " + word + " \t*****************\n\n");
-		input= usr.getInput();
+		while(true)
+		{
+			Timer time = new Timer();
+			String word = data.generateWord();
+			System.out.println("\n\n************ \t " + word + " \t*****************\n\n");
+			input= usr.getInput();
+			result.check(input, word);
+			System.out.println(result.getScore());
+			time.getSec();
+		}
 		
-		result.check(input, word);
-		System.out.println(result.getScore());
 		
 		
 		
